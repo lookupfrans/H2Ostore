@@ -6,11 +6,18 @@
   <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC&amp;display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
+
+  <div class="loader">
+    <img class="image-title" alt="" src="images/jpg6.jpg" />
+    <div></div>
+  </div>
+  <div class-"content">
   <div id="app" class="container">
     <h2>H2O store</h2>
     <h3>Min 100.000</h3>
@@ -141,6 +148,14 @@
       </div>
     </shopping-cart>
   </div>
+  </div>
+
+   <script>
+    $(window).on('load', function () {
+      $(".loader").fadeOut(2000);
+      $(".content").fadeIn(2000);
+    });
+  </script>
 
   <script src="countDown.js"></script>
   <script src="vue.min.js"></script>
