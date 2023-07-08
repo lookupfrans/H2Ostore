@@ -10,8 +10,52 @@
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC&amp;display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <style>
+  .loader>.image-title {
+    height: 100px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    /*border-top-color: #2a88e6;
+  border: 15px solid #45474b;*/
+    position: absolute;
+    background-image: url(../img/jpg6.jpg);
+    margin: auto;
+    margin-bottom: 400px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    animation: fadeOut 1s infinite linear;
+    /*-webkit-animation-duration: 5s;animation-duration: 1s;*/
+    /*-webkit-animation-fill-mode: both;animation-fill-mode: both;*/
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .loader {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #000;
+    /*position: absolute;*/
+  }
+
+  .content {
+    display: none;
+  }
+  
   h2 {
     font-size: 30px;
     border-bottom: 1px solid #000;
@@ -40,6 +84,12 @@
 </style>
 
 <body>
+
+  <div class="loader">
+    <img class="image-title" alt="" src="images/jpg6.jpg" />
+    <div></div>
+  </div>
+  <div class-"content">
   <div class="container">
     <h2>H2O store</h2>
   </div>
@@ -88,6 +138,14 @@
           If you wish to unsubscribe from our mailing list you are welcome to do this at any time.</p>
       </div>
       <br /><br /><br />
+    </div>
+
+      <script>
+          $(window).on('load', function () {
+            $(".loader").fadeOut(2000);
+            $(".content").fadeIn(2000);
+          });
+        </script>
 
       <php echo "<p style='margin-left: 390px;'>&nbsp;<a href="./index" class="ref">Silakan kembali</a></p>
 </body>
